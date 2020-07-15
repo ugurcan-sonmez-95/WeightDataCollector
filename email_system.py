@@ -1,10 +1,11 @@
 from email.mime.text import MIMEText
 import smtplib
+from getpass import getpass
 
 ### Sends the weight data to the user e-mail
 def send_email(s_email, s_weight, average_weight, s_count):
-    from_email = "email@email.com"
-    from_password = "password"
+    from_email = input("Please enter your e-mail address: ")
+    from_password = getpass("Please enter your password: ")
     to_email = s_email
 
     subject = "Weight Statistics"
